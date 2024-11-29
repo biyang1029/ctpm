@@ -264,7 +264,7 @@ InitializationData initializeSimulation(Patient* thePatient) {
 
     simData.RadiationPower = 226.225;
     simData.DeltaTime = 0.05;
-    simData.MaximumIteration = 144000;
+    simData.MaximumIteration = 7200/simData.DeltaTime;
 
     simData.Qmet = ((3.941 * thePatient->V_o2 / 100 * thePatient->Bre_r + 1.106 * thePatient->V_co2 / 100 * thePatient->Bre_r - 0.061 * 2.17) * 4.184 * 1000 / 60 - 1.76 * thePatient->Bre_r/ 1000 * (thePatient->Tcor - (thePatient->Ta - (0.370 * 0.81 * 4400))));
 
